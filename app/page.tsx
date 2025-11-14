@@ -41,18 +41,19 @@ export default function Home() {
           </div>
         </div>
 
-        {/* RIGHT SIDE IMAGE */}
-      <div className="">
-        <div className="absolute top-20 left-180 w-[800px] h-[800px]">
-        <Image
-          src="/girl.jpg"
-          alt="Trip to Greece"
-          width={1200}
-          height={1100}
-          className="rounded-2xl object-cover w-full h-full"
-          />
+       {/* RIGHT SIDE IMAGE */}
+        <div className="hidden md:block">   {/* Hides on mobile, shows on md+ */}
+          <div className="absolute top-20 left-180 w-[800px] h-[800px]">
+            <Image
+              src="/girl.jpg"
+              alt="Trip to Greece"
+              width={1200}
+              height={1100}
+              className="rounded-2xl object-cover w-full h-full"
+            />
+          </div>
         </div>
-        </div>
+
       </section>
 
 {/* SERVICES SECTION */}
@@ -368,15 +369,23 @@ export default function Home() {
       </div>
 
       {/* BRAND LOGOS */}
-       {/* ✅ SINGLE BRAND IMAGE BELOW */}
-      <div className="w-full flex justify-center mt-10">
-        <Image
-          src="/logos.png" // your combined image file
-          alt="Brand Logos"
-          width={1000}
-          height={150}
-          className="w-full max-w-5xl h-auto object-contain"
-        />
+      <div className="w-full overflow-hidden mt-10">
+        <div className="scroll-container">
+          <Image
+            src="/logos.png"
+            alt="Brand Logos"
+            width={1000}
+            height={150}
+            className="w-1/2 h-auto object-contain"
+          />
+          <Image
+            src="/logos.png"
+            alt="Brand Logos Duplicate"
+            width={1000}
+            height={150}
+            className="w-1/2 h-auto object-contain"
+          />
+        </div>
       </div>
     </section>
 
